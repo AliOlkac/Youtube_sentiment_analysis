@@ -2,8 +2,8 @@ from googleapiclient.discovery import build
 import pandas as pd
 
 # YouTube API ayarları
-api_key = 'AIzaSyDk7L-mTjNCW1xB9QJF6zVi1jdFOh3hCac'
-video_id = 'C7NWXPxCQPI'  # Yorumlarını çekmek istediğiniz videonun ID'si
+api_key = 'Mal KAAN'
+video_id = 'Mal Meret'  # Yorumlarını çekmek istediğiniz videonun ID'si
 
 youtube = build('youtube', 'v3', developerKey=api_key)
 
