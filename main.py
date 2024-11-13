@@ -20,7 +20,7 @@ def main():
 
     # Kullanıcıdan eğitim konusu al
     query = st.text_input("Eğitim Konusu Girin:")
-    query = "matematiğin guler yuzu "
+
     if query:
         st.write(f"Aranan Konu: **{query}**")
 
