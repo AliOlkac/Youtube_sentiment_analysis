@@ -47,7 +47,8 @@ streamlit run main.py
 
 
 ## **Örnek Sonuçlar**
-![image](https://github.com/user-attachments/assets/672e382e-d2d9-449b-b163-d3ad0c88e9cb)
+![image](https://github.com/user-attachments/assets/fba376f6-d99b-48cd-82ae-238ddd70f8e5)
+
 
 
 # **Geliştirme Hedefleri**
