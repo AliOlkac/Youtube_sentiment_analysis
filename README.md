@@ -35,8 +35,12 @@ streamlit run main.py
 
 ### **Kullanım**
 *  Konu Girişi: Sol menüde, analiz etmek istediğiniz eğitim konusunu girin.
-*  Analiz Sonuçları: Uygulama, yorumları analiz eder ve sonuçları tablo ve grafik olarak gösterir.
 *  Tema Değiştirme: Koyu ve açık modlar arasında geçiş yaparak arayüzü özelleştirebilirsiniz.
+![image](https://github.com/user-attachments/assets/508faddb-d0bb-4b3d-b0a0-a76d4c45ab45)
+*  Analiz Sonuçları: Uygulama, yorumları analiz eder ve sonuçları tablo ve grafik olarak gösterir.
+![image](https://github.com/user-attachments/assets/292c79d5-1756-41d1-9505-43334a9ca469)
+
+
 
 
 ## **Örnek Sonuçlar**
