@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/e00cd367-c4c2-48da-a919-3735092a1b96)
+![image](https://github.com/user-attachments/assets/4e640360-b4f6-4c47-be70-c7dbc358df65)
+
 
 
 # _**Eğitim Videoları Yorum Analizi**_
