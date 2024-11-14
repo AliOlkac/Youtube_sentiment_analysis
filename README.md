@@ -28,3 +28,22 @@ Bu proje, YouTube'daki eğitim videolarına gelen yorumları analiz eden bir duy
 pip install -r requirements.txt
 streamlit run main.py
 ```
+## **Proje Yapısı**
+*main.py: Ana uygulama dosyası; Streamlit arayüzünü içerir.
+*README.md: Proje hakkında bilgi sağlar.
+*requirements.txt: Proje için gerekli olan Python paketlerinin listesi.
+
+### ** Kullanım**
+*Konu Girişi: Sol menüde, analiz etmek istediğiniz eğitim konusunu girin.
+*Analiz Sonuçları: Uygulama, yorumları analiz eder ve sonuçları tablo ve grafik olarak gösterir.
+*Tema Değiştirme: Koyu ve açık modlar arasında geçiş yaparak arayüzü özelleştirebilirsiniz.
+
+
+## **Örnek Sonuçlar**
+![image](https://github.com/user-attachments/assets/672e382e-d2d9-449b-b163-d3ad0c88e9cb)
+
+
+# **Geliştirme Hedefleri**
+*YouTube API'sinden daha fazla veri çekerek analiz kapasitesini arttırmak.
+*Farklı duygu sınıflandırma algoritmaları ekleyerek analiz doğruluğunu artırmak.
+*Daha fazla grafik ve veri görselleştirme seçeneği eklemek.
