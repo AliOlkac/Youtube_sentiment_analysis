@@ -1,11 +1,28 @@
 from googleapiclient.discovery import build
 import pandas as pd
+import yaml
 
-api_key = 'AIzaSyDk7L-mTjNCW1xB9QJF6zVi1jdFOh3hCac'
-youtube = build("youtube", "v3", developerKey=api_key)
+with open("secrets.yml", "r") as file:
+    secrets = yaml.safe_load(file)
 
+api_keys = [secrets['api_key'], secrets['api_key1'], secrets['api_key2'], secrets['api_key3']]
+current_key_index = 0
+
+def get_youtube_service():
+    global current_key_index
+    while current_key_index < len(api_keys):
+        try:
+            youtube = build('youtube', 'v3', developerKey=api_keys[current_key_index])
+            # Basit bir istek yaparak API anahtarını test edin
+            youtube.search().list(q="test", part="id", maxResults=1).execute()
+            return youtube
+        except Exception:
+            print(f"API key {api_keys[current_key_index]} failed: API limit aşımı yapıldı")
+            current_key_index += 1
+    raise Exception("All API keys have reached their limit.")
 
 def get_video_id(query):
+    youtube = get_youtube_service()
     search_response = youtube.search().list(
         q=query,
         part="id",
@@ -13,26 +30,20 @@ def get_video_id(query):
         maxResults=1
     ).execute()
 
-    # items listesi içinde veri olup olmadığını kontrol edin
     if 'items' in search_response and len(search_response['items']) > 0:
         item = search_response['items'][0]['id']
-
-        # Video mu yoksa oynatma listesi mi olduğunu kontrol edin
         if item['kind'] == 'youtube#video':
-            video_id = item['videoId']
-            return video_id
-
+            return item['videoId']
         elif item['kind'] == 'youtube#playlist':
-            print("Bu sonuç bir oynatma listesi, video değil.")
+            print("This result is a playlist, not a video.")
             return None
     else:
-        print("Bu arama sorgusuna uygun bir video bulunamadı.")
+        print("No video found for this query.")
         return None
-# Yorumları çekme fonksiyonu
 
 def pull_comments(video_id, max_comments=100):
-    youtube = build('youtube', 'v3', developerKey=api_key)
     comments = []
+    youtube = get_youtube_service()
     request = youtube.commentThreads().list(
         part="snippet",
         videoId=video_id,
@@ -64,13 +75,10 @@ def pull_comments(video_id, max_comments=100):
 
     return pd.DataFrame(comments, columns=['Author', 'Comment', 'Like_Count', 'Published_At'])
 
-
-
 """# Test
 video_id = get_video_id("polinomlar")
 comments = pull_comments(video_id)
 print(comments)
-print("Yorumları başarıyla çekti.")
-# Yorumları kaydet
+print("Comments successfully retrieved.")
 comments.to_csv('youtube_comments_1.csv', index=False)
-print("Yorumlar başarıyla kaydedildi.")"""
+print("Comments successfully saved.")"""

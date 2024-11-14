@@ -10,13 +10,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\cleaned_youtube_comments_1.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\predicted_sentiments.csv">
           <value>
             <Attribute>
@@ -35,13 +28,6 @@
           <value>
             <Attribute>
               <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\youtube_comments.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value=":" />
             </Attribute>
           </value>
         </entry>
