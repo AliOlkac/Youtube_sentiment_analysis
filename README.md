@@ -2,7 +2,7 @@
 
 Bu proje, YouTube'daki eğitim videolarına gelen yorumları analiz eden bir duygu analiz uygulamasıdır. Kullanıcıların belirli bir eğitim konusundaki videoları aramasına, yorumları analiz etmesine ve yorumların olumlu, olumsuz veya nötr olup olmadığını görselleştirmesine olanak tanır.
 
-**Özellikler**
+##**Özellikler**
 *Eğitim Konusu Arama: Kullanıcıların belirli bir eğitim konusunu girerek ilgili videoları bulmalarını sağlar.
 *Duygu Analizi: Yorumları pozitif, negatif veya nötr olarak sınıflandırır.
 *Kapsamlı Görselleştirme: Analiz edilen sonuçların grafikler ve tablolar ile sunulmasını sağlar.
@@ -15,7 +15,7 @@ Bu proje, YouTube'daki eğitim videolarına gelen yorumları analiz eden bir duy
 *Matplotlib ve Pandas: Veri işleme ve sonuçları görselleştirme amacıyla kullanıldı.
 
 
-**Kullanılan Teknolojiler ve Kütüphaneler**
+###**Kullanılan Teknolojiler ve Kütüphaneler**
 *Python: Projenin ana programlama dili.
 *TensorFlow ve Keras: Duygu analizi modelini eğitmek için kullanılan yapay zeka kütüphaneleri.
 *Streamlit: Kullanıcı arayüzünü oluşturmak ve kullanıcı etkileşimlerini kolaylaştırmak için kullanıldı.
