@@ -1,4 +1,9 @@
+![image](https://github.com/user-attachments/assets/e00cd367-c4c2-48da-a919-3735092a1b96)
+
+
 # _**Eğitim Videoları Yorum Analizi**_
+
+
 
 Bu proje, YouTube'daki eğitim videolarına gelen yorumları analiz eden bir duygu analiz uygulamasıdır. Kullanıcıların belirli bir eğitim konusundaki videoları aramasına, yorumları analiz etmesine ve yorumların olumlu, olumsuz veya nötr olup olmadığını görselleştirmesine olanak tanır.
 
