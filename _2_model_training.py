@@ -1,6 +1,5 @@
 import joblib
 import pandas as pd
-import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from keras.src.models import Sequential
@@ -18,6 +17,7 @@ def train_model():
     # Etiketleri sayısal değerlere çevir
     label_encoder = LabelEncoder()
     labels = label_encoder.fit_transform(labels)
+    joblib.dump(label_encoder, 'label_encoder.joblib')
 
     # Eğitim ve test verilerini ayır
     X_train, X_test, y_train, y_test = train_test_split(texts, labels, test_size=0.2, random_state=42)
