@@ -41,7 +41,7 @@ def predict_sentiment(model, comments, tokenizer, label_encoder):
 
     return pd.DataFrame({'Cleaned_Comment': texts, 'Predicted_Sentiment': predicted_labels})
 
-"""
+
 print("Predict Sentiment fonksiyonu başarı")
 # Test
 # Yorumları yükle
@@ -55,7 +55,7 @@ label_encoder = joblib.load('label_encoder.joblib')
 # Yorumları tahmin et ve csv dosyasına kaydet
 predictions = predict_sentiment(model, comments_df, tokenizer, label_encoder)
 predictions.to_csv('predicted_sentiments.csv', index=False)
-"""
+
 
 
 
